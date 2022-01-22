@@ -16,7 +16,7 @@
                 <div class="col-lg-4 ">
                     <div class="div-img-bg">
                         <div class="about-img">
-                            <img src="folio/img/me.jpg" class="img-responsive" alt="me">
+                            <img src="folio/img/lenn-on-chair.jpeg" class="img-responsive" alt="me">
                         </div>
                     </div>
                 </div>
@@ -24,8 +24,8 @@
                 <div class="col-lg-7">
                     <div class="about-descr">
 
-                        <p class="p-heading">im a ux /ui designer austin based who loves clean, simple & unique design. i also enjoy crafting brand identities, icons, & ilustration work. </p>
-                        <p class="separator">To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family.English person.</p>
+                        <p class="p-heading">Im a problem solver and lifelong learner who likes solving problems through technology. I am also a huge supporter of youth development & the UN's SDGs </p>
+                        <p class="separator">All it took was a simple intro to computer science course in varisty and I have been hooked for life. Not only to learning how to use technology to solve problems but also how to be a lifelong learner & contributing member of society.</p>
 
                     </div>
 
@@ -265,11 +265,9 @@
 
                             <h2 class="mb-30">GET IN TOUCH</h2>
 
-                            <ul class="contact-details">
-                                <li><span>23 Main, Street</span></li>
-                                <li><span>New York, United States</span></li>
-                                <li><span>+88 01912704287</span></li>
-                                <li><span>example@example.com</span></li>
+                            <ul class="contact-details">                                
+                                <li><span>+264 81 395 8732</span></li>
+                                <li><span>lensig13@gmail.com</span></li>
                             </ul>
 
                         </div>
