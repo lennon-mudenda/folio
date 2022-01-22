@@ -13,4 +13,22 @@ class FolioController extends Controller
     {
         return view('templates.folio.index');
     }
+
+
+    /*
+    * Home Route Handler
+    */
+    public function post()
+    {
+        return view('templates.folio.post');
+    }
+
+
+    /*
+    * Home Route Handler
+    */
+    public function project()
+    {
+        return view('templates.folio.project');
+    }
 }

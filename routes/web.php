@@ -14,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [FolioController::class, 'index']);
+
+Route::get('/posts/{post}', [FolioController::class, 'post']);
+
+Route::get('/projects/{project}', [FolioController::class, 'project']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
