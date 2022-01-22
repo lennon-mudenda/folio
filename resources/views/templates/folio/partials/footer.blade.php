@@ -4,10 +4,7 @@
         <div class="socials-media text-center">
 
             <ul class="list-unstyled">
-                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                @include('templates.folio.partials.social')
             </ul>
 
         </div>

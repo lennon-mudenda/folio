@@ -3,14 +3,11 @@
 
     <div class="container">
         <div class="hero-content">
-            <h1>I'm <span class="typed" data-typed-items="Alex Smith, Designer, Developer, Freelancer, Photographer"></span></h1>
-            <p>Designer, Developer, Freelancer, Photographer</p>
+            <h1>I'm <span class="typed" data-typed-items="Lennon Mudenda, Educator, Developer, Freelancer, Traveller"></span></h1>
+            <p>Educator, Developer, Freelancer, Traveller</p>
 
             <ul class="list-unstyled list-social">
-                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                @include('templates.folio.partials.social')
             </ul>
         </div>
     </div>
