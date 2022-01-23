@@ -16,7 +16,7 @@ class InquiryController extends Controller
      */
     public function index()
     {
-        //
+        return $this->success("Inquiries retrived successfully", Inquiry::all()->toArray());
     }
 
     /**
@@ -27,7 +27,7 @@ class InquiryController extends Controller
      */
     public function store(StoreInquiryRequest $request)
     {
-        //
+        return $this->success("Inquiry created successfully", Inquiry::create($request->validated())->toArray());
     }
 
     /**
@@ -38,7 +38,7 @@ class InquiryController extends Controller
      */
     public function show(Inquiry $inquiry)
     {
-        //
+        return $this->success("Inquiry retrieved successfully", $inquiry->toArray());
     }
 
     /**
@@ -50,7 +50,8 @@ class InquiryController extends Controller
      */
     public function update(UpdateInquiryRequest $request, Inquiry $inquiry)
     {
-        //
+        $inquiry->update($request->validated());
+        return $this->success("Inquiry updated successfully", $inquiry->toArray());
     }
 
     /**
@@ -61,6 +62,7 @@ class InquiryController extends Controller
      */
     public function destroy(Inquiry $inquiry)
     {
-        //
+        $inquiry->delete();
+        return $this->success("Inquiry deleted successfully", $inquiry->toArray());
     }
 }
