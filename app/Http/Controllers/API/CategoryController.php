@@ -16,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return $this->success("Categories retrieved successfully", Category::all()->toArray());
     }
 
 
@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        return $this->success("New category created successfully", Category::create($request->validated()));
     }
 
     /**
@@ -39,7 +39,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return $this->success("Category retrieved successfully", $category->toArray());
     }
     
 
@@ -52,7 +52,8 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        $category->update($request->validated());
+        return $this->success("Category updated successfully", $category->toArray());
     }
 
     /**
@@ -63,6 +64,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return $this->success("Category deleted successfully", $category->toArray());
     }
 }
