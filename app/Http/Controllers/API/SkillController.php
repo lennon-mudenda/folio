@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Http\Requests\StoreInquiryRequest;
-use App\Http\Requests\UpdateInquiryRequest;
-use App\Models\Inquiry;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSkillRequest;
+use App\Http\Requests\UpdateSkillRequest;
+use App\Models\Skill;
 
-class InquiryController extends Controller
+class SkillController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class InquiryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreInquiryRequest  $request
+     * @param  \App\Http\Requests\StoreSkillRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreInquiryRequest $request)
+    public function store(StoreSkillRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class InquiryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Inquiry  $inquiry
+     * @param  \App\Models\Skill  $skill
      * @return \Illuminate\Http\Response
      */
-    public function show(Inquiry $inquiry)
+    public function show(Skill $skill)
     {
         //
     }
@@ -53,10 +54,10 @@ class InquiryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Inquiry  $inquiry
+     * @param  \App\Models\Skill  $skill
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inquiry $inquiry)
+    public function edit(Skill $skill)
     {
         //
     }
@@ -64,11 +65,11 @@ class InquiryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateInquiryRequest  $request
-     * @param  \App\Models\Inquiry  $inquiry
+     * @param  \App\Http\Requests\UpdateSkillRequest  $request
+     * @param  \App\Models\Skill  $skill
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateInquiryRequest $request, Inquiry $inquiry)
+    public function update(UpdateSkillRequest $request, Skill $skill)
     {
         //
     }
@@ -76,10 +77,10 @@ class InquiryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Inquiry  $inquiry
+     * @param  \App\Models\Skill  $skill
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Inquiry $inquiry)
+    public function destroy(Skill $skill)
     {
         //
     }

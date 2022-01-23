@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Http\Requests\StoreSectionRequest;
-use App\Http\Requests\UpdateSectionRequest;
-use App\Models\Section;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreInquiryRequest;
+use App\Http\Requests\UpdateInquiryRequest;
+use App\Models\Inquiry;
 
-class SectionController extends Controller
+class InquiryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class SectionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSectionRequest  $request
+     * @param  \App\Http\Requests\StoreInquiryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSectionRequest $request)
+    public function store(StoreInquiryRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class SectionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Section  $section
+     * @param  \App\Models\Inquiry  $inquiry
      * @return \Illuminate\Http\Response
      */
-    public function show(Section $section)
+    public function show(Inquiry $inquiry)
     {
         //
     }
@@ -53,10 +54,10 @@ class SectionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Section  $section
+     * @param  \App\Models\Inquiry  $inquiry
      * @return \Illuminate\Http\Response
      */
-    public function edit(Section $section)
+    public function edit(Inquiry $inquiry)
     {
         //
     }
@@ -64,11 +65,11 @@ class SectionController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSectionRequest  $request
-     * @param  \App\Models\Section  $section
+     * @param  \App\Http\Requests\UpdateInquiryRequest  $request
+     * @param  \App\Models\Inquiry  $inquiry
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSectionRequest $request, Section $section)
+    public function update(UpdateInquiryRequest $request, Inquiry $inquiry)
     {
         //
     }
@@ -76,10 +77,10 @@ class SectionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Section  $section
+     * @param  \App\Models\Inquiry  $inquiry
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Section $section)
+    public function destroy(Inquiry $inquiry)
     {
         //
     }

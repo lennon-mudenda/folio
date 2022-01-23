@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Http\Requests\StoreSkillRequest;
-use App\Http\Requests\UpdateSkillRequest;
-use App\Models\Skill;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreImageRequest;
+use App\Http\Requests\UpdateImageRequest;
+use App\Models\Image;
 
-class SkillController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class SkillController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSkillRequest  $request
+     * @param  \App\Http\Requests\StoreImageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSkillRequest $request)
+    public function store(StoreImageRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class SkillController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Skill  $skill
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(Skill $skill)
+    public function show(Image $image)
     {
         //
     }
@@ -53,10 +54,10 @@ class SkillController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Skill  $skill
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function edit(Skill $skill)
+    public function edit(Image $image)
     {
         //
     }
@@ -64,11 +65,11 @@ class SkillController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSkillRequest  $request
-     * @param  \App\Models\Skill  $skill
+     * @param  \App\Http\Requests\UpdateImageRequest  $request
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSkillRequest $request, Skill $skill)
+    public function update(UpdateImageRequest $request, Image $image)
     {
         //
     }
@@ -76,10 +77,10 @@ class SkillController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Skill  $skill
+     * @param  \App\Models\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Skill $skill)
+    public function destroy(Image $image)
     {
         //
     }

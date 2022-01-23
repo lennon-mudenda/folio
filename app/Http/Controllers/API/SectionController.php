@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Http\Requests\StoreSectionTypeRequest;
-use App\Http\Requests\UpdateSectionTypeRequest;
-use App\Models\SectionType;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSectionRequest;
+use App\Http\Requests\UpdateSectionRequest;
+use App\Models\Section;
 
-class SectionTypeController extends Controller
+class SectionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class SectionTypeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSectionTypeRequest  $request
+     * @param  \App\Http\Requests\StoreSectionRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSectionTypeRequest $request)
+    public function store(StoreSectionRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class SectionTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\SectionType  $sectionType
+     * @param  \App\Models\Section  $section
      * @return \Illuminate\Http\Response
      */
-    public function show(SectionType $sectionType)
+    public function show(Section $section)
     {
         //
     }
@@ -53,10 +54,10 @@ class SectionTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SectionType  $sectionType
+     * @param  \App\Models\Section  $section
      * @return \Illuminate\Http\Response
      */
-    public function edit(SectionType $sectionType)
+    public function edit(Section $section)
     {
         //
     }
@@ -64,11 +65,11 @@ class SectionTypeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSectionTypeRequest  $request
-     * @param  \App\Models\SectionType  $sectionType
+     * @param  \App\Http\Requests\UpdateSectionRequest  $request
+     * @param  \App\Models\Section  $section
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSectionTypeRequest $request, SectionType $sectionType)
+    public function update(UpdateSectionRequest $request, Section $section)
     {
         //
     }
@@ -76,10 +77,10 @@ class SectionTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SectionType  $sectionType
+     * @param  \App\Models\Section  $section
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SectionType $sectionType)
+    public function destroy(Section $section)
     {
         //
     }
