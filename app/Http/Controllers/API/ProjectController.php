@@ -16,7 +16,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return $this->success("Projects retrieved successfuly", Project::all()->toArray());
     }
 
     /**
@@ -27,7 +27,8 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        $project = Project::create($request->validated());
+        return $this->success("Project created successfully", $project->toArray());
     }
 
     /**
@@ -38,7 +39,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return $this->success("Project retrieved successfully", $project->toArray());
     }
 
     /**
@@ -50,7 +51,8 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $project->update($request->validated());
+        return $this->success("Project updated successfully", $project->toArray());
     }
 
     /**
@@ -61,6 +63,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return $this->success("Project deleted successfully", $project->toArray());
     }
 }
