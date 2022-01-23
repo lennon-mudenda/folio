@@ -28,4 +28,12 @@ class Project extends Model
         'end' => 'date',
         'url' => 'string'
     ];
+
+    /**
+     * Get all of the project's images.
+     */
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
 }
