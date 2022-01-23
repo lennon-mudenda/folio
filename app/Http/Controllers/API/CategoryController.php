@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
@@ -15,18 +16,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return $this->success("Categories retrieved successfully", Category::all()->toArray());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +28,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        return $this->success("New category created successfully", Category::create($request->validated()));
     }
 
     /**
@@ -47,19 +39,9 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return $this->success("Category retrieved successfully", $category->toArray());
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
+    
 
     /**
      * Update the specified resource in storage.
@@ -70,7 +52,8 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        $category->update($request->validated());
+        return $this->success("Category updated successfully", $category->toArray());
     }
 
     /**
@@ -81,6 +64,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return $this->success("Category deleted successfully", $category->toArray());
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
@@ -15,17 +16,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return $this->success("Projects retrieved successfuly", Project::all()->toArray());
     }
 
     /**
@@ -36,7 +27,8 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        $project = Project::create($request->validated());
+        return $this->success("Project created successfully", $project->toArray());
     }
 
     /**
@@ -47,18 +39,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Project  $project
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Project $project)
-    {
-        //
+        return $this->success("Project retrieved successfully", $project->toArray());
     }
 
     /**
@@ -70,7 +51,8 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $project->update($request->validated());
+        return $this->success("Project updated successfully", $project->toArray());
     }
 
     /**
@@ -81,6 +63,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return $this->success("Project deleted successfully", $project->toArray());
     }
 }

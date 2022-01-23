@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Post;
@@ -15,17 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return $this->success("Posts retrieved successfully", Post::all()->toArray());
     }
 
     /**
@@ -36,7 +27,9 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        //
+        $post = Post::create($request->validated());
+        $post->load('image');
+        return $this->success("Post created successfully", $post->toArray());
     }
 
     /**
@@ -47,18 +40,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
+        $post->load('image');
+        return $this->success("Post retrieved successfully", $post->toArray());
     }
 
     /**
@@ -70,7 +53,8 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $post->update($request->validated());
+        return $this->success("Post updated successfully", $post->toArray());
     }
 
     /**
@@ -81,6 +65,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return $this->success("Post deleted successfully", $post->toArray());
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSectionTypeRequest;
 use App\Http\Requests\UpdateSectionTypeRequest;
 use App\Models\SectionType;
@@ -14,16 +15,6 @@ class SectionTypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
     {
         //
     }
@@ -46,17 +37,6 @@ class SectionTypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(SectionType $sectionType)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SectionType  $sectionType
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SectionType $sectionType)
     {
         //
     }

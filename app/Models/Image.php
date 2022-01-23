@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Casts\Image as CastsImage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,4 +21,8 @@ class Image extends Model
     {
         return $this->morphTo();
     }
+
+    protected $casts = [
+        'uri' => CastsImage::class
+    ];
 }

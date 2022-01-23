@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreInquiryRequest;
 use App\Http\Requests\UpdateInquiryRequest;
 use App\Models\Inquiry;
@@ -15,17 +16,7 @@ class InquiryController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return $this->success("Inquiries retrived successfully", Inquiry::all()->toArray());
     }
 
     /**
@@ -36,7 +27,7 @@ class InquiryController extends Controller
      */
     public function store(StoreInquiryRequest $request)
     {
-        //
+        return $this->success("Inquiry created successfully", Inquiry::create($request->validated())->toArray());
     }
 
     /**
@@ -47,18 +38,7 @@ class InquiryController extends Controller
      */
     public function show(Inquiry $inquiry)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Inquiry  $inquiry
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Inquiry $inquiry)
-    {
-        //
+        return $this->success("Inquiry retrieved successfully", $inquiry->toArray());
     }
 
     /**
@@ -70,7 +50,8 @@ class InquiryController extends Controller
      */
     public function update(UpdateInquiryRequest $request, Inquiry $inquiry)
     {
-        //
+        $inquiry->update($request->validated());
+        return $this->success("Inquiry updated successfully", $inquiry->toArray());
     }
 
     /**
@@ -81,6 +62,7 @@ class InquiryController extends Controller
      */
     public function destroy(Inquiry $inquiry)
     {
-        //
+        $inquiry->delete();
+        return $this->success("Inquiry deleted successfully", $inquiry->toArray());
     }
 }
