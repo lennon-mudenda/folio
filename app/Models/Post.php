@@ -16,7 +16,7 @@ class Post extends Model
 
 
     /**
-     * Get the post's image.
+     * Get the post's cover image.
      */
     public function image()
     {

@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return $this->success("Posts retrieved successfully", Post::all()->toArray());
     }
 
     /**
@@ -27,7 +27,9 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        //
+        $post = Post::create($request->validated());
+        $post->load('image');
+        return $this->success("Post created successfully", $post->toArray());
     }
 
     /**
@@ -38,7 +40,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        $post->load('image');
+        return $this->success("Post retrieved successfully", $post->toArray());
     }
 
     /**
@@ -50,7 +53,8 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $post->update($request->validated());
+        return $this->success("Post updated successfully", $post->toArray());
     }
 
     /**
@@ -61,6 +65,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return $this->success("Post deleted successfully", $post->toArray());
     }
 }
