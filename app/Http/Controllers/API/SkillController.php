@@ -16,7 +16,7 @@ class SkillController extends Controller
      */
     public function index()
     {
-        //
+        return $this->success("Skills retrieved successfully", Skill::all()->toArray());
     }
 
     /**
@@ -27,7 +27,7 @@ class SkillController extends Controller
      */
     public function store(StoreSkillRequest $request)
     {
-        //
+        return $this->success("Skill created successfully", Skill::create($request->validated())->toArray());
     }
 
     /**
@@ -38,7 +38,7 @@ class SkillController extends Controller
      */
     public function show(Skill $skill)
     {
-        //
+        return $this->success("Skill retrieved successfully", $skill->toArray());
     }
 
     /**
@@ -50,7 +50,8 @@ class SkillController extends Controller
      */
     public function update(UpdateSkillRequest $request, Skill $skill)
     {
-        //
+        $skill->update($request->validated());
+        return $this->success("Skill updated successfully", $skill->toArray());
     }
 
     /**
@@ -61,6 +62,7 @@ class SkillController extends Controller
      */
     public function destroy(Skill $skill)
     {
-        //
+        $skill->delete();
+        return $this->success("Skill deleted successfully", $skill);
     }
 }
