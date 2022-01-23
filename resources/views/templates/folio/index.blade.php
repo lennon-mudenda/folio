@@ -24,7 +24,7 @@
                 <div class="col-lg-7">
                     <div class="about-descr">
 
-                        <p class="p-heading">Im a problem solver and lifelong learner who likes solving problems through technology. I am also a huge supporter of youth development & the UN's SDGs </p>
+                        <p class="p-heading">I'm a problem solver and lifelong learner who likes solving problems through technology. I am also a huge supporter of youth empowerment & the UN's SDGs </p>
                         <p class="separator">All it took was a simple intro to computer science course in varisty and I have been hooked for life. Not only to learning how to use technology to solve problems but also how to be a lifelong learner & contributing member of society.</p>
 
                     </div>
